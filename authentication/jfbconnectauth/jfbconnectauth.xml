@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension  type="plugin" group="authentication" method="upgrade" client="site">
+	<name>Authentication - JFBConnect Social Integration</name>
+	<version>9.1.55</version>
+	<creationDate>2023/11/27</creationDate>
+	<author>SourceCoast | www.sourcecoast.com</author>
+	<authorEmail>support@sourcecoast.com</authorEmail>
+	<authorUrl>http://www.sourcecoast.com</authorUrl>
+	<copyright>Copyright (C) 2009-2023 SourceCoast. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Social network authentication plugin to be used with JFBConnect</description>
+	<files>
+		<filename plugin="jfbconnectauth">jfbconnectauth.php</filename>
+	</files>
+</extension>
