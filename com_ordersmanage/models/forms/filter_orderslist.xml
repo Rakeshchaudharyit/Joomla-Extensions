@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_ORDERSMANAGE_FILTER_SEARCH_LABEL"
+			description="COM_ORDERSMANAGE_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+		<field
+			name="order_status_code"
+			type="list"
+			label="COM_ORDERSMANAGE_FIELD_ORDER_STATUS_LABEL"
+			description="COM_ORDERSMANAGE_FIELD_ORDER_STATUS_DESC"
+			class="chzn-status-state"
+			size="1"
+			default="" 
+			onchange="this.form.submit();">
+	     <option value="">Please Select Order Status</option>
+	     <option value="D">Pagamento disponivel</option>
+	     <option value="P">Pendente</option>
+	     <option value="C">Confirmado</option>
+	     <option value="X">Cancelado</option>
+    	     <option value="R">Retornado</option>
+	     <option value="S">Despachado</option>
+	     <option value="F">Completo</option>
+	    </field>
+		<field
+			name="order_sortby"
+			type="list"
+			label="COM_ORDERSMANAGE_FIELD_ORDER_SORTBY_LABEL"
+			description="COM_ORDERSMANAGE_FIELD_ORDER_SORTBY_DESC"
+			class="chzn-sortby"
+			size="1"
+			default="" 
+			onchange="this.form.submit();">
+		 <option value="">Please Select SortBy</option>
+		 <option value="o.created_on ASC">Order Date ASC</option>
+		 <option value="o.created_on DESC">Order Date DESC</option>
+	     <option value="u.first_name ASC">User First Name ASC</option>
+	     <option value="u.first_name DESC">User First Name DESC</option>
+	     <option value="u.last_name ASC">User Last Name ASC</option>
+	     <option value="u.last_name DESC">User Last Name DESC</option>
+
+	    </field>
+	 		
+	</fields>
+	<fields name="list">				
+	 <field
+			name="limit"
+			type="limitbox"
+			label="COM_ORDERSMANAGE_LIST_LIMIT"
+			description="COM_ORDERSMANAGE_LIST_LIMIT_DESC"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

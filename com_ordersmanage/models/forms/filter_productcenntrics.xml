@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_ORDERSMANAGE_FILTER_SEARCH_LABEL"
+			description="COM_ORDERSMANAGE_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+	</fields>
+	<fields name="list">
+		<field
+			name="order_sortby"
+			type="list"
+			label="COM_ORDERSMANAGE_FIELD_ORDER_SORTBY_LABEL"
+			description="COM_ORDERSMANAGE_FIELD_ORDER_SORTBY_DESC"
+			class="chzn-sortby"
+			size="1"
+			default=""
+			onchange="this.form.submit();">
+			<option value="">Please Select SortBy</option>
+			<option value="oi.order_item_name ASC">Product Name ASC</option>
+			<option value="oi.order_item_name DESC">Product Name DESC</option>
+			<option value="oi.product_quantity ASC">QTY ASC</option>
+			<option value="oi.product_quantity DESC">QTY DESC</option>
+			<option value="oi.virtuemart_order_id ASC">Order ID ASC</option>
+			<option value="oi.virtuemart_order_id DESC">Order ID DESC</option>
+			<option value="oi.created_on ASC">Order Date ASC</option>
+			<option value="oi.created_on DESC">Order Date DESC</option>
+			<option value="u.city ASC">City ASC</option>
+			<option value="u.city DESC">City DESC</option>
+
+	    </field>
+	 	<field
+			name="limit"
+			type="limitbox"
+			label="COM_ORDERSMANAGE_LIST_LIMIT"
+			description="COM_ORDERSMANAGE_LIST_LIMIT_DESC"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>
